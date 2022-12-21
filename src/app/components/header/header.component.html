@@ -1,0 +1,27 @@
+<header>
+    <ul ngbNav #nav="ngbNav" class="nav-tabs ul-nav-control">
+        <div class="header-heading">
+            <h1>{{this.sharedDataService.name}}</h1>
+        </div>
+        <div class="header-navbar">
+            <button type="button" class="btn btn-link" (click)="this.sharedDataService.componentNavigation('about')">about</button>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button type="button" class="btn btn-link" ngbDropdownToggle>Education</button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <button ngbDropdownItem (click)="this.sharedDataService.componentNavigation('education')">Education</button>
+                    <button ngbDropdownItem (click)="this.sharedDataService.componentNavigation('education/skills')">Skills</button>
+                </div>
+            </div>
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button type="button" class="btn btn-link" ngbDropdownToggle>projects</button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <button ngbDropdownItem (click)="this.sharedDataService.componentNavigation('projects')">Preview</button>
+                    <button ngbDropdownItem (click)="this.sharedDataService.componentNavigation('projects/vacations')">Vacations</button>
+                    <button ngbDropdownItem (click)="this.sharedDataService.componentNavigation('projects/eCommerce')">ECommerce</button>
+                    <button ngbDropdownItem (click)="this.sharedDataService.componentNavigation('projects/trainer')">Trainer</button>
+                </div>
+            </div>
+            <button type="button" class="btn btn-link" (click)="this.sharedDataService.componentNavigation('contact')">contact</button>
+        </div>
+    </ul>
+</header>

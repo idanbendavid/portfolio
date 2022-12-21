@@ -1,0 +1,30 @@
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: mediumblue;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.header-heading > h1{
+    margin: 15px 40px;
+}
+
+ .btn-link {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+@media all and (max-width: 600px){
+    .ul-nav-control{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .header-heading> h1 {
+        margin-bottom: 0px;
+    }
+}
