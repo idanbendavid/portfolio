@@ -1,0 +1,83 @@
+.contact {
+    text-align: center;
+    margin: 80px;
+}
+
+.contact-introduction {
+    margin-bottom: 30px;
+}
+
+.contact-introduction> h1{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-introduction > p {
+    font-size: 18px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.form-labels {
+    text-transform: capitalize;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-labels>label {
+    margin-bottom: 16px;
+}
+
+.form-texts>input {
+    margin-bottom: 30px;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    text-indent: 5px;
+}
+
+#formName, #formEmail, #formSubject {
+    width: 250px;
+    height: 30px
+}
+
+#formThoughts {
+    width: 250px;
+    height: 100px;
+    resize: none;
+    overflow-y: auto;
+    word-break: break-word;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+.form-button {
+    margin-top: 15px;
+}
+
+.contact > span {
+    font-size: 11px;
+}
+
+@media all and (max-width: 500px){
+    .contact-introduction> h1{
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-introduction > p {
+        font-size: 14px;
+    }
+    
+}
