@@ -1,1 +1,27 @@
-<p>education works!</p>
+<div class="education">
+    <div *ngFor="let item of education">
+        <div class="card  education-card">
+            <div class="row ">
+                <h1>{{item.institue}}</h1>
+                <h2>{{item.course}}</h2>
+            </div>
+            <div class="details">
+                <div>
+                    <h4>technologies</h4>
+                    <p *ngFor="let technology of item.technologies">{{technology}}</p>
+                </div>
+                <div>
+                    <h4>resources</h4>
+                    <p *ngFor="let resource of item.extra_resources">
+                        <a href="{{resource}}">{{resource}}</a>
+                    </p>
+                </div>
+                <div> 
+                    <p>{{item.summary}}</p>
+                </div>
+                <div>
+                    <span>{{item.certificates}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
