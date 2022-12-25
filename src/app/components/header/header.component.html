@@ -1,7 +1,7 @@
 <header>
     <ul ngbNav #nav="ngbNav" class="nav-tabs ul-nav-control">
         <div class="header-heading">
-            <h1>{{this.sharedDataService.name}}</h1>
+            <h1>{{this.sharedDataService.profile[0].name}}</h1>
         </div>
         <div class="header-navbar">
             <button type="button" class="btn btn-link" (click)="this.sharedDataService.componentNavigation('about')">about</button>

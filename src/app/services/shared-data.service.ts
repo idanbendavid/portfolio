@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import data from "../../assets/portfolio.json";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedDataService {
 
-  constructor(private router: Router) { }
+  public education;
+  public projects;
+  public profile;
 
-  public name: string = 'idan ben david';
-  public profession: string = 'full stack developer';
+  constructor(private router: Router) { 
+    this.education = data.education
+    this.projects = data.projects
+    this.profile = data.profile
+  }
 
   componentNavigation(page: string): void{
     this.router.navigate([`/${page}`])
