@@ -5,30 +5,31 @@
         <p>Do you think i have room to imporve?</p>
         <p>Feel free to express your thoughts</p>
     </div>
-    <form action="" class="contact-form">
+    <form [formGroup]="contactForm" class="contact-form">
         <div class="form-labels">
-            <label for="formName">name</label>
+            <label for="name">name</label>
             <br>
-            <label for="formEmail">email</label>
+            <label for="email">email</label>
             <br>
-            <label for="formSubject">subject</label>
+            <label for="subject">subject</label>
             <br>
-            <label for="formThoughts">thoughts</label>
+            <label for="thoughts">thoughts</label>
         </div>
 
         <div class="form-texts">
-            <input type="text" id="formName" name="formName" placeholder="Name" required>
+            <input type="text" id="formName" name="name" placeholder="Name" formControlName="name" required>
             <br>
-            <input type="text" id="formEmail" name="formEmail" placeholder="Email" required>
+            <input type="text" id="formEmail" name="email" placeholder="Email" formControlName="email" required>
             <br>
-            <input type="text" id="formSubject" name="formSubject" placeholder="optional">
+            <input type="text" id="formSubject" name="subject" formControlName="subject" placeholder="subject">
             <br>
-            <textarea name="formThoughts" id="formThoughts" required
-                placeholder="Share your thoughts with us"></textarea>
+            <textarea name="houghts" id="formThoughts" required placeholder="Share your thoughts with us"
+                formControlName="thoughts"></textarea>
         </div>
     </form>
+    <!-- <p *ngIf="email.errors">Email required</p> -->
     <div class="form-button">
-        <button class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-primary" (click)="contactFormSubmit()">Send</button>
     </div>
     <br>
     <span>
