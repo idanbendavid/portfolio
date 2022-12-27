@@ -1,27 +1,44 @@
-<div class="education">
-    <div *ngFor="let item of education">
-        <div class="card  education-card">
-            <div class="row ">
-                <h1>{{item.institue}}</h1>
-                <h2>{{item.course}}</h2>
+<div class="education-component">
+    <div *ngFor="let item of education; let i = index" class="card-section">
+        <div class="card education-card" id={{i}}>
+            <div class="card-headline">
+                <h1>{{item.course}}</h1>
+                <h2>{{item.institue}}</h2>
             </div>
-            <div class="details">
-                <div>
-                    <h4>technologies</h4>
-                    <p *ngFor="let technology of item.technologies">{{technology}}</p>
-                </div>
-                <div>
-                    <h4>resources</h4>
-                    <p *ngFor="let resource of item.extra_resources">
-                        <a href="{{resource}}">{{resource}}</a>
-                    </p>
-                </div>
-                <div> 
-                    <p>{{item.summary}}</p>
-                </div>
-                <div>
-                    <span>{{item.certificates}}</span>
-                </div>
+
+            <div class="card-summary">
+                <h4>summary</h4>
+                <p>{{item.summary}}</p>
+            </div>
+
+            <div class="card-technologies">
+                <ngb-accordion activeIds="ngb-panel-{{0}}">
+                    <ngb-panel id={{i}} title="Technologies">
+                        <ng-template ngbPanelContent>
+                            <p *ngFor="let technology of item.technologies">{{technology}}</p>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div>
+
+            <div class="card-resources">
+                <ngb-accordion activeIds="ngb-panel-{{0}}">
+                    <ngb-panel id={{i}} title="Resources">
+                        <ng-template ngbPanelContent>
+                            <a *ngFor="let resource of item.extra_resources" class="card-link links">{{resource}}</a>
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
+            </div>
+
+            <div class="card-certificate">
+                <ngb-accordion activeIds="ngb-panel-{{0}}">
+                    <ngb-panel id={{i}} title="Cretificates">
+                        <ng-template ngbPanelContent>
+                            <img src={{item.certificates}} alt="cretificate">
+                        </ng-template>
+                    </ngb-panel>
+                </ngb-accordion>
             </div>
         </div>
     </div>

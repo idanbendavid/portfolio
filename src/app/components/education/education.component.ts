@@ -11,7 +11,7 @@ export class EducationComponent {
   public education;
 
   constructor(public sharedDataService: SharedDataService){
-    this.education = this.sharedDataService.education
+    this.education = this.sharedDataService.education;
   }
 
 }
