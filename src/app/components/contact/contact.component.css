@@ -68,6 +68,15 @@
     font-size: 11px;
 }
 
+@media all and ((max-width:800px) and (min-width: 700px)){
+    .contact-introduction> h1{
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 20px;
+    } 
+}
+
 @media all and (max-width: 500px){
     .contact-introduction> h1{
         text-decoration: underline;
