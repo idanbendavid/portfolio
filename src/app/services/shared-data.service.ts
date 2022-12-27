@@ -11,13 +11,19 @@ export class SharedDataService {
   public projects;
   public profile;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
     this.education = data.education
     this.projects = data.projects
     this.profile = data.profile
   }
 
-  componentNavigation(page: string): void{
-    this.router.navigate([`/${page}`])
+  componentNavigation(page: string): void {
+
+    if (page == 'projects/portfolio') {
+      this.router.navigate(['/about'])
+    } else {
+      this.router.navigate([`/${page}`])
+    }
   }
+
 }
