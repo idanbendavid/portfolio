@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedDataService } from 'src/app/services/shared-data.service';
 
 @Component({
   selector: 'app-vacations',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class VacationsComponent {
 
+  public vacations;
+  
+  constructor(public sharedDataService: SharedDataService){
+    this.vacations = this.sharedDataService.projects[0];
+  }
 }

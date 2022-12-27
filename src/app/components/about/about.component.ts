@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedDataService } from 'src/app/services/shared-data.service';
 
 @Component({
   selector: 'app-about',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  public profile;
+  constructor(public shareDataService: SharedDataService){
+    this.profile = this.shareDataService.profile[0];
+  }
 }

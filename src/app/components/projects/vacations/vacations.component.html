@@ -1,1 +1,10 @@
-<p>vacations works!</p>
+<div>
+    <button (click)="this.sharedDataService.componentNavigation('projects')">return to projects</button>
+</div>
+<div>
+    {{vacations.name}}
+    {{vacations.summary}}
+    {{vacations.technologies}}
+    {{vacations.links}}
+    <img src="{{vacations.images}}" alt="vacations-project">
+</div>

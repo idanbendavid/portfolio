@@ -1,1 +1,11 @@
-<p>trainer works!</p>
+<div>
+    <button (click)="this.sharedDataService.componentNavigation('projects')">return to projects</button>
+</div>
+
+<div>
+    {{trainer.name}}
+    {{trainer.summary}}
+    {{trainer.technologies}}
+    {{trainer.links}}
+    <img src="{{trainer.images}}" alt="trainer">
+</div>

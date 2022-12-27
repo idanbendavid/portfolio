@@ -1,1 +1,10 @@
-<p>e-commerce works!</p>
+<div>
+    <button (click)="this.sharedDataService.componentNavigation('projects')">return to projects</button>
+</div>
+<div>
+    {{eCommerce.name}}
+    {{eCommerce.summary}}
+    {{eCommerce.technologies}}
+    {{eCommerce.links}}
+    <img src="{{eCommerce.images}}" alt="eCommerce">
+</div>
