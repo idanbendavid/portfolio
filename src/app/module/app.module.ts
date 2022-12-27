@@ -13,11 +13,11 @@ import { ContactComponent } from '../components/contact/contact.component';
 import { ECommerceComponent } from '../components/projects/e-commerce/e-commerce.component';
 import { VacationsComponent } from '../components/projects/vacations/vacations.component';
 import { TrainerComponent } from '../components/projects/trainer/trainer.component';
-import { SkillsComponent } from '../components/education/skills/skills.component';
 import { SharedDataService } from '../services/shared-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -30,7 +30,6 @@ import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     ECommerceComponent,
     VacationsComponent,
     TrainerComponent,
-    SkillsComponent,
     HomeComponent,
   ],
   imports: [
@@ -43,7 +42,8 @@ import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     NgbModule,
     NgbDropdownModule,
-    NgbNavModule
+    NgbNavModule,
+    NgbAccordionModule
   ],
   providers: [SharedDataService],
   bootstrap: [HomeComponent]
