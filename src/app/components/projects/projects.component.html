@@ -1,12 +1,19 @@
 <div class="projects-preview">
-    <div class="card" *ngFor="let project of projects; let i = index">
+    <div class="card project-card" *ngFor="let project of projects; let i = index">
         <h1>{{project.name}}</h1>
-        <div>
-            <h4> {{project.technologies[0]}}</h4>
-            <h4> {{project.technologies[1]}}</h4>
+        <div class="project-tech">
+            <h4>{{project.technologies[0]}}</h4>
+            <h4>{{project.technologies[1]}}</h4>
         </div>
         <p> {{project.summary}}</p>
-        <p> {{project.links}}</p>
-        <button (click)="this.sharedDataService.componentNavigation('projects/' + project.name)">view project</button>
+        <div class="project-links">
+            <p> {{project.links[0]}}</p>
+            <p> {{project.links[1]}}</p>
+            <p> {{project.links[2]}}</p>
+        </div>
+        <button class="btn btn-primary" (click)="this.sharedDataService.componentNavigation('projects/' + project.name)">project details</button>
     </div>
+</div>
+<div>
+    <h1 class="future">and many more to come!</h1>
 </div>
