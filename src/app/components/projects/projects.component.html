@@ -2,8 +2,8 @@
     <div class="card project-card" *ngFor="let project of projects; let i = index">
         <h1>{{project.name}}</h1>
         <div class="project-tech">
-            <h4>{{project.technologies[0]}}</h4>
-            <h4>{{project.technologies[1]}}</h4>
+            <h4 *ngIf="project.technologies[0].frontend">Frontend: {{project.technologies[0].frontend}}</h4>
+            <h4 *ngIf="project.technologies[1].backend">Backend: {{project.technologies[1].backend}}</h4>
         </div>
         <p> {{project.summary}}</p>
         <div class="project-links">
@@ -11,7 +11,8 @@
             <p> {{project.links[1]}}</p>
             <p> {{project.links[2]}}</p>
         </div>
-        <button class="btn btn-primary" (click)="this.sharedDataService.componentNavigation('projects/' + project.name)">project details</button>
+        <button class="btn btn-primary"
+            (click)="this.sharedDataService.componentNavigation('projects/' + project.name)">Work Process</button>
     </div>
 </div>
 <div>
