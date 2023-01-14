@@ -1,5 +1,4 @@
 .education-component {
-    margin-top: 50px;
     margin-left: 100px;
     display: grid;
     grid-template-rows: 1fr;
@@ -60,6 +59,18 @@
     display: none;
 }
 
+.certificates-ref {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.certificates-ref > button {
+    color: white;
+    text-transform: capitalize;
+}
+
 @media all and ((min-width: 700px) and (max-width: 1200px)){
     .accordion-control-large{
         display: none;
@@ -85,6 +96,9 @@
         word-break: break-word;
     }
 
+    .card-headline > h1 {
+        font-size: 20px;
+    }
     .card-headline > h1, h2 {
         margin: 0px 5px;
     }
@@ -94,6 +108,10 @@
         text-decoration: underline;
         font-weight: bold;
         margin-bottom: 5px;
+    }
+
+    .certificates-ref {
+        margin-right: 70px;
     }
 }
 
@@ -152,5 +170,9 @@
         text-decoration: underline;
         font-weight: bold;
         margin-bottom: 5px;
+    }
+
+    .certificates-ref { 
+        margin-right: 50px;
     }
 }

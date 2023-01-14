@@ -1,4 +1,7 @@
 <div class="education-component">
+    <div class="certificates-ref">
+        <button class="btn btn-primary" (click)="this.sharedDataService.componentNavigation('education/certificates')">certificates</button>
+    </div>
     <div *ngFor="let item of education; let i = index" class="card-section">
         <div class="card education-card" id={{i}}>
             <div class="card-headline">
@@ -6,6 +9,7 @@
                 </h1>
                 <h1 *ngIf="!item.Link">{{item.course}}</h1>
                 <h2>{{item.institue}}</h2>
+                <h2>{{item.time}}</h2>
             </div>
 
             <div class="card-summary">
