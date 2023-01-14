@@ -8,11 +8,17 @@ import { ProjectsComponent } from '../components/projects/projects.component';
 import { VacationsComponent } from '../components/projects/vacations/vacations.component';
 import { ECommerceComponent } from '../components/projects/e-commerce/e-commerce.component';
 import { TrainerComponent } from '../components/projects/trainer/trainer.component';
+import { CertificatesComponent } from '../components/education/certificates/certificates.component';
 
 const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "contact", component: ContactComponent },
-  { path: "education", component: EducationComponent  },
+  {
+    path: "education", children: [
+      { path: "", component: EducationComponent },
+      { path: "certificates", component: CertificatesComponent }
+    ]
+  },
   {
     path: "projects", children: [
       { path: "", component: ProjectsComponent },
@@ -21,7 +27,7 @@ const routes: Routes = [
       { path: "trainer", component: TrainerComponent },
     ]
   },
-  {path: "", redirectTo: "about", pathMatch:"full"}
+  { path: "", redirectTo: "about", pathMatch: "full" }
 ]
 
 @NgModule({

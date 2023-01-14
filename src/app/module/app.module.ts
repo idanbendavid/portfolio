@@ -18,6 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { CertificatesComponent } from '../components/education/certificates/certificates.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
     VacationsComponent,
     TrainerComponent,
     HomeComponent,
+    CertificatesComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     NgbDropdownModule,
     NgbNavModule,
-    NgbAccordionModule
+    NgbAccordionModule,
+    NgImageSliderModule
   ],
   providers: [SharedDataService],
   bootstrap: [HomeComponent]
