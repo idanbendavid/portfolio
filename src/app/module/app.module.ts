@@ -20,6 +20,7 @@ import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { CertificatesComponent } from '../components/education/certificates/certificates.component';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { ButtonComponent } from '../components/common/button/button.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     TrainerComponent,
     HomeComponent,
     CertificatesComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
