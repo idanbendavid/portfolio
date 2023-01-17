@@ -1,0 +1,63 @@
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.trainer-project-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.trainer-article>p {
+    margin: 0px 20px;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 1.1;
+}
+
+.trainer-tech {
+    margin-left: 20px;
+}
+
+.trainer-tech>h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.trainer-links {
+    margin-left: 20px;
+}
+
+.trainer-links>h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.trainer-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer-images > h2 {
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+@media all and (max-width: 1200px) {
+    .trainer-project-data {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .trainer-images {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}

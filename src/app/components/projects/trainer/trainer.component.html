@@ -1,11 +1,72 @@
-<div>
-    <button (click)="this.sharedDataService.componentNavigation('projects')">return to projects</button>
-</div>
-
-<div>
-    {{trainer.name}}
-    {{trainer.summary}}
-    {{trainer.technologies}}
-    {{trainer.links}}
-    <img src="{{trainer.images}}" alt="trainer">
+<app-button></app-button>
+<div class="container-fluid">
+    <h1>{{trainer.name}}</h1>
+    <div class="trainer-project-data">
+        <article class="trainer-article">
+            <p>When I first thought about this project two things came to mind: <br>
+                First, I wanted to redeem the grade I received in the Vacations Project and improve my abilities in
+                React and Redux. Second, from a personal point of view, whenever I've tried to exercise, I wasn't able
+                to stay
+                focused thanks to the fact that I wasn't organized enough and didn't have much knowledge in this
+                particular area.
+            </p>
+            <br>
+            <p>
+                To start the project, I researched an exercise database that would be clear to the user and would be
+                diverse in terms of exercise options, that's how I found the Rapid API exercises database. To build this
+                project
+                using React and Redux, I had to re-learn the basics by creating organized components based on
+                responsibilities
+                and managing the state of various data using Redux-Toolkit which helped me understand how to manage data
+                correctly.
+            </p>
+            <br>
+            <p>
+                Furthermore, the project design process encouraged me to improve my knowledge of techniques that were
+                not strong such as file uploading from client to server. <br>
+                Also, I wanted to discover more advanced features like the node-mailer library for node.js to send
+                emails to users.
+            </p>
+            <br>
+            <p>
+                <b>Has this project given solutions to my thoughts?</b> <br>
+                Yes, however my job is not done. My next steps are to refactor the code, improve UI visualization and
+                find a
+                suitable hoisting service for me to share the project with the world.
+            </p>
+            <br>
+            <div class="trainer-tech">
+                <h3>Technologies used:</h3>
+                <ul>
+                    <li>
+                        <b>Frontend</b> - {{trainer.technologies[0].frontend}},
+                    </li>
+                    <li>
+                        <b>Backend</b> - {{trainer.technologies[1].backend}}
+                    </li>
+                </ul>
+            </div>
+            <div class="trainer-links">
+                <h3>Resources: </h3>
+                <ul>
+                    <li>
+                        Production: <a href="{{trainer.links[0]}}" target="_blank">{{trainer.links[0]}}</a>
+                    </li>
+                    <li>
+                        Github - Backend: <a href="{{trainer.links[1]}}" target="_blank">{{trainer.links[1]}}</a>
+                    </li>
+                    <li>
+                        Github - Frontend: <a href="{{trainer.links[2]}}" target="_blank">{{trainer.links[2]}}</a>
+                    </li>
+                    <li>
+                        Rapid API: <a href="{{trainer.links[3]}}" target="_blank">{{trainer.links[3]}}</a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <div class="trainer-images">
+            <h2>Project walkthrough</h2>
+            <img style="width:450px;" src="{{trainer.images}}" alt="trainer">
+        </div>
+    </div>
 </div>
