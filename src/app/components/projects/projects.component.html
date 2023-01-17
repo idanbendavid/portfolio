@@ -5,14 +5,12 @@
             <h4 *ngIf="project.technologies[0].frontend">Frontend: {{project.technologies[0].frontend}}</h4>
             <h4 *ngIf="project.technologies[1].backend">Backend: {{project.technologies[1].backend}}</h4>
         </div>
-        <p> {{project.summary}}</p>
+        <p> {{project.introduction}}</p>
         <div class="project-links">
-            <p> {{project.links[0]}}</p>
-            <p> {{project.links[1]}}</p>
-            <p> {{project.links[2]}}</p>
+            <p>Production: {{project.links[0]}}</p>
         </div>
         <button class="btn btn-primary"
-            (click)="this.sharedDataService.componentNavigation('projects/' + project.name)">Work Process</button>
+            (click)="this.sharedDataService.componentNavigation('projects/' + project.name)">Read More</button>
     </div>
 </div>
 <div>

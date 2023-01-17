@@ -1,0 +1,68 @@
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.vacations-project-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.vacations-article>p {
+    margin: 0px 20px;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 1.1;
+}
+
+.vacations-tech {
+    margin-left: 20px;
+}
+
+.vacations-tech>h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.vacations-links {
+    margin-left: 20px;
+}
+
+.vacations-links>h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+p>li {
+    margin-top: 5px;
+    list-style-type: decimal;
+}
+
+.vacations-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.vacations-images > h2 {
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+@media all and (max-width: 1200px) {
+    .vacations-project-data {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .vacations-images {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}

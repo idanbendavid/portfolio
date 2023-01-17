@@ -1,10 +1,68 @@
-<div>
-    <button (click)="this.sharedDataService.componentNavigation('projects')">return to projects</button>
-</div>
-<div>
-    {{eCommerce.name}}
-    {{eCommerce.summary}}
-    {{eCommerce.technologies}}
-    {{eCommerce.links}}
-    <img src="{{eCommerce.images}}" alt="eCommerce">
+<app-button></app-button>
+<div class="container-fluid">
+    <h1>{{eCommerce.name}}</h1>
+    <div class="ecommerce-project-data">
+        <article class="ecommerce-article">
+            <p>
+                In all honesty, the topic of this project is not my favorite because eCommerce websites are used in a
+                broad
+                aspect to give answers to many businesses. Despite that, it leads people who used online tools to create
+                those websites to act like they are programmers even though they didn't write code,
+                and to me, coding is work that never ends.
+                There are always tests to do, problems to fix, versions to publish, and features to discover.
+            </p>
+            <br>
+            <p>
+                Our goal in this project was to practice angular by creating an online grocery store that will
+                provide the ability to buy products and get them delivered to the user's address after completing
+                payment on the site.
+                Implemented features in the project:
+                <li>Subject, Behavior Subject from the rxjs library</li>
+                <li>Pipes</li>
+                <li>Authentication Interceptor</li>
+                <li>Services</li>
+                <li>Guard</li>
+            </p>
+            <br>
+            <p>
+                This project was our 4th and last project in the course, and it granted me the highest score between the
+                exams and projects that took place.
+                The reason that I earned a high score was the fact that I took an active approach by leading and sharing
+                knowledge about specific requirements in the project.
+                That fact allowed me to be among the first to submit the project doing so with confidence that my code
+                is at the highest level.
+            </p>
+            <br>
+            <div class="ecommerce-tech">
+                <h3>Technologies used:</h3>
+                <ul>
+                    <li>
+                        <b>Frontend</b> - {{eCommerce.technologies[0].frontend}}
+                    </li>
+                    <li>
+                        <b>Backend</b> - {{eCommerce.technologies[1].backend}}
+
+                    </li>
+                </ul>
+            </div>
+            <div class="ecommerce-links">
+                <h3>Resources: </h3>
+                <ul>
+                    <li>
+                        Production: <a href="{{eCommerce.links[0]}}" target="_blank">{{eCommerce.links[0]}}</a>
+                    </li>
+                    <li>
+                        Github - Backend: <a href="{{eCommerce.links[1]}}" target="_blank">{{eCommerce.links[1]}}</a>
+                    </li>
+                    <li>
+                        Github - Frontend: <a href="{{eCommerce.links[2]}}" target="_blank">{{eCommerce.links[2]}}</a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <div class="ecommerce-images">
+            <h2>Project walkthrough</h2>
+            <img style="width: 450px;" src="{{eCommerce.images}}" alt="eCommerce">
+        </div>
+    </div>
 </div>

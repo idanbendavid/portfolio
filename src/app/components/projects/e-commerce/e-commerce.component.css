@@ -1,0 +1,68 @@
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.ecommerce-project-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ecommerce-article>p {
+    margin: 0px 20px;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 1.1;
+}
+
+p>li {
+    margin-top: 5px;
+    list-style-type: decimal;
+}
+
+.ecommerce-tech {
+    margin-left: 20px;
+}
+
+.ecommerce-tech>h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.ecommerce-links {
+    margin-left: 20px;
+}
+
+.ecommerce-links>h3 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.ecommerce-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ecommerce-images>h2 {
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+@media all and (max-width: 1200px) {
+    .ecommerce-project-data {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .ecommerce-images {
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+}

@@ -1,10 +1,84 @@
-<div>
-    <button (click)="this.sharedDataService.componentNavigation('projects')">return to projects</button>
-</div>
-<div>
-    {{vacations.name}}
-    {{vacations.summary}}
-    {{vacations.technologies}}
-    {{vacations.links}}
-    <img src="{{vacations.images}}" alt="vacations-project">
+<app-button></app-button>
+<div class="container-fluid">
+    <h1>{{vacations.name}}</h1>
+    <div class="vacations-project-data">
+        <article class="vacations-article">
+            <p>
+                This project is the third project as part of the Full Stack course I took. The first two were a html5
+                and
+                jQuery projects which I am not considering as significant as this one and as the eCommerce project
+                because they did not include server-side architecture or HTTP rest API calls.
+                Those two projects have been plain learning of the languages. Although that is important, they were not
+                close to what is around the web development community.
+            </p>
+            <br>
+            <p>
+                Even though I did not receive the high score that I wanted, I present this project as part of my
+                portfolio for two reasons:
+                <li>
+                    I did not do it alone - I got help from my coursemates. They helped me complete it and understand
+                    the thoughts behind every action.
+                </li>
+                <li>
+                    it was probably one of the first times I worked hard to create something of my own.
+                </li>
+            </p>
+            <br>
+            <p>This project was about creating a website that will give his users the option to follow changes in
+                vacations they might be interested in.
+                Our goal here was to use the website database to store the "vacations" and the data of the users so they
+                would have the ability to follow vacations and enquire about them when the time is right.
+                In addition, we also managed an admin side of the website that will allow the admin to add, change
+                details or delete vacations based on criteria.
+            </p>
+            <br>
+            <p>
+                Why didn't I receive a high score on this project?
+                <li>UX/UI design - was not good enough to attract people.</li>
+                <li>
+                    Insufficient use of methods - the following vacation mechanism in this project was accomplished
+                    with the JavaScript sort array method. At the time of writing the project, I had a problem learning
+                    this
+                    method, and actions in the project were affected, beginning with the database and ending with UX/UI
+                    design.
+                </li>
+                <li>
+                    A required aspect of the project was using socket I.O. communication which will allow sending
+                    changes
+                    of data to the user without making him refresh the page to receive the changes that happened. I had
+                    failed to make this aspect.
+                </li>
+            </p>
+            <br>
+            <div class="vacations-tech">
+                <h3>Technologies used:</h3>
+                <ul>
+                    <li>
+                        <b>Frontend</b> - {{vacations.technologies[0].frontend}}
+                    </li>
+                    <li>
+                        <b>Backend</b> - {{vacations.technologies[1].backend}}
+                    </li>
+                </ul>
+            </div>
+            <div class="vacations-links">
+                <h3>Resources: </h3>
+                <ul>
+                    <li>
+                        Production: <a href="{{vacations.links[0]}}" target="_blank">{{vacations.links[0]}}</a>
+                    </li>
+                    <li>
+                        Github - Backend: <a href="{{vacations.links[1]}}" target="_blank">{{vacations.links[1]}}</a>
+                    </li>
+                    <li>
+                        Github - Frontend: <a href="{{vacations.links[2]}}" target="_blank">{{vacations.links[2]}}</a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <div class="vacations-images">
+            <h2>Project walkthrough</h2>
+            <img style="width: 450px;" src="{{vacations.images}}" alt="vacations-project">
+        </div>
+    </div>
 </div>
