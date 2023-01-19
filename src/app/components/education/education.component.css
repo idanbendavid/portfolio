@@ -10,7 +10,7 @@
     width: 90%;
     height: 270px;
     display: grid;
-    grid-template-columns: 3fr 4fr 5fr;
+    grid-template-columns: 3fr 6fr 3fr;
 }
 
 .links {
@@ -30,12 +30,16 @@
     text-align: center;
 }
 
-.card-headline > h1, h2 {
+.card-headline>h1, h2 {
     margin: 0px 5px;
 }
 
 .card-summary {
     padding: 10px;
+    overflow-y: auto;
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .card-summary-medium>h4 {
@@ -55,7 +59,7 @@
     display: none;
 }
 
-.accordion-control-medium{
+.accordion-control-medium {
     display: none;
 }
 
@@ -66,20 +70,20 @@
     margin-right: 100px;
 }
 
-.certificates-ref > button {
+.certificates-ref>button {
     color: white;
     text-transform: capitalize;
 }
 
-@media all and ((min-width: 700px) and (max-width: 1200px)){
-    .accordion-control-large{
+@media all and ((min-width: 700px) and (max-width: 1200px)) {
+    .accordion-control-large {
         display: none;
     }
 
-    .accordion-control-medium{
+    .accordion-control-medium {
         display: block;
     }
-    
+
     .accordion-control-small {
         display: none;
     }
@@ -87,6 +91,7 @@
     .card {
         display: grid;
         grid-template-columns: 3fr 9fr;
+        height: 300px;
     }
 
     .card-summary {
@@ -94,16 +99,18 @@
         flex-direction: column;
         justify-content: space-between;
         word-break: break-word;
+        overflow-y: auto;
     }
 
-    .card-headline > h1 {
+    .card-headline>h1 {
         font-size: 20px;
     }
-    .card-headline > h1, h2 {
+
+    .card-headline>h1, h2 {
         margin: 0px 5px;
     }
 
-    .accordion-control-medium > h4 {
+    .accordion-control-medium>h4 {
         text-transform: capitalize;
         text-decoration: underline;
         font-weight: bold;
@@ -117,6 +124,10 @@
 
 
 @media all and (max-width: 700px) {
+    .education-component {
+        margin-left: 50px;
+    }
+    
     .card {
         display: grid;
         grid-template-rows: 1fr 6fr 5fr;
@@ -126,8 +137,6 @@
     }
 
     .card-summary {
-        overflow-y: auto;
-        overflow-x: hidden;
         word-break: break-word;
     }
 
@@ -153,15 +162,13 @@
         display: none;
     }
 
-    .accordion-control-medium{
+    .accordion-control-medium {
         display: none;
     }
 
-    
+
     .accordion-control-small {
         display: block;
-        overflow-y: auto;
-        overflow-x: hidden;
         word-break: break-word;
     }
 
@@ -172,7 +179,7 @@
         margin-bottom: 5px;
     }
 
-    .certificates-ref { 
+    .certificates-ref {
         margin-right: 50px;
     }
 }
