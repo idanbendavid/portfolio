@@ -21,6 +21,7 @@ import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { CertificatesComponent } from '../components/education/certificates/certificates.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ButtonComponent } from '../components/common/button/button.component';
+import { ContactService } from '../services/contact.service';
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { ButtonComponent } from '../components/common/button/button.component';
     NgbAccordionModule,
     NgImageSliderModule
   ],
-  providers: [SharedDataService],
+  providers: [SharedDataService, ContactService],
   bootstrap: [HomeComponent]
 })
 export class AppModule { }

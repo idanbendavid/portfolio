@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,21 +9,51 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
-  contactForm = new FormGroup({
-    name: new FormControl<string |null>("", [Validators.required]),
-    email: new FormControl<string| null>("", Validators.compose([Validators.required, Validators.email])),
-    subject: new FormControl<string| null>("", [Validators.required]),
-    thoughts: new FormControl<string| null>("", [Validators.required])
+  constructor(public contactService: ContactService) { }
+
+
+  public contactForm = new FormGroup({
+    name: new FormControl<string | null>("", [Validators.required]),
+    email: new FormControl<string | null>("", Validators.compose([Validators.required, Validators.email])),
+    subject: new FormControl<string | null>("", [Validators.required]),
+    thoughts: new FormControl<string | null>("", [Validators.required])
   });
 
+  @ViewChild("formNameRef", { static: false })
+  formNameRef!: ElementRef;
 
-  contactFormSubmit() {
+  @ViewChild("formEmailRef", { static: false })
+  formEmailRef!: ElementRef;
+
+  @ViewChild("formSubjectRef", { static: false })
+  formSubjectRef!: ElementRef;
+
+  @ViewChild("formThoughtsRef", { static: false })
+  formThoughtsRef!: ElementRef;
+
+
+  clearFormInputs(): void {
+    this.formNameRef.nativeElement.value = "";
+    this.formEmailRef.nativeElement.value = "";
+    this.formSubjectRef.nativeElement.value = "";
+    this.formThoughtsRef.nativeElement.value = "";
+  }
+
+  contactFormSubmit(): void {
     console.log(this.contactForm.value)
-    // this.contactForm.reset()
+
+    this.contactService.PostMessage(this.contactForm.value).subscribe(response => {
+      location.href = 'https://mailthis.to/confirm';
+      console.log(response)
+    }, error => {
+      console.warn(error.responseText)
+      console.log({ error })
+    })
+
+    this.clearFormInputs();
   }
 
   ngOnInit(): void {
   }
 
-}
+} 

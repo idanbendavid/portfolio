@@ -17,14 +17,17 @@
         </div>
 
         <div class="form-texts">
-            <input type="text" id="formName" name="name" placeholder="Name" formControlName="name" required>
+            <input type="text" id="formName" name="name" placeholder="Name" formControlName="name" required
+                #formNameRef>
             <br>
-            <input type="text" id="formEmail" name="email" placeholder="Email" formControlName="email" required>
+            <input type="text" id="formEmail" name="email" placeholder="Email" formControlName="email" required
+                #formEmailRef>
             <br>
-            <input type="text" id="formSubject" name="subject" formControlName="subject" placeholder="subject">
+            <input type="text" id="formSubject" name="subject" formControlName="subject" placeholder="subject"
+                #formSubjectRef>
             <br>
             <textarea name="houghts" id="formThoughts" required placeholder="Share your thoughts with us"
-                formControlName="thoughts"></textarea>
+                formControlName="thoughts" #formThoughtsRef></textarea>
         </div>
     </form>
     <!-- <p *ngIf="email.errors">Email required</p> -->
