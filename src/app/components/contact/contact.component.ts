@@ -19,26 +19,6 @@ export class ContactComponent implements OnInit {
     thoughts: new FormControl<string | null>("", [Validators.required])
   });
 
-  @ViewChild("formNameRef", { static: false })
-  formNameRef!: ElementRef;
-
-  @ViewChild("formEmailRef", { static: false })
-  formEmailRef!: ElementRef;
-
-  @ViewChild("formSubjectRef", { static: false })
-  formSubjectRef!: ElementRef;
-
-  @ViewChild("formThoughtsRef", { static: false })
-  formThoughtsRef!: ElementRef;
-
-
-  clearFormInputs(): void {
-    this.formNameRef.nativeElement.value = "";
-    this.formEmailRef.nativeElement.value = "";
-    this.formSubjectRef.nativeElement.value = "";
-    this.formThoughtsRef.nativeElement.value = "";
-  }
-
   contactFormSubmit(): void {
     console.log(this.contactForm.value)
 
@@ -50,7 +30,7 @@ export class ContactComponent implements OnInit {
       console.log({ error })
     })
 
-    this.clearFormInputs();
+    this.contactForm.reset();
   }
 
   ngOnInit(): void {
